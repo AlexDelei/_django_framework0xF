@@ -1,0 +1,34 @@
+{% extends "blog/base.html" %}
+
+{% block title %}
+    Blog App
+{% endblock %}
+
+
+{% block content %}
+        <h1>Hello World of django</h1>
+        <p>Do you know me? [No / Yes]</p>
+        <br>
+        <ul>
+            {% for i in details %}
+                <li><a href="/blog/details/{{ i.id }}">{{ i.first_name }}  {{ i.last_name }}</a></li>
+                <li>: {{ i.date_posted }}</li>
+                <br>
+            {% endfor %}
+        </ul>
+
+        
+        {% for j in Posts %}
+        <article class="media content-section">
+            <div class="media-body">
+              <div class="article-metadata">
+                <a class="mr-2" href="#">{{ j.author }}</a>
+                <small class="text-muted">{{ j.date_posted }}</small>
+              </div>
+              <h2><a class="article-title" href="#">{{ j.title }}</a></h2>
+              <p class="article-content">{{ j.content }}</p>
+            </div>
+          </article>
+        {% endfor %}
+        <p class="link">Lets see the <a href="/blog/about">About page</a></p>
+{% endblock %}

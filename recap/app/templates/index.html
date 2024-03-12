@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+
+{% block header %}
+<div class="container" id="header_1">
+    <hr> 
+        {% if request.user.is_authenticated %}
+           <p id="welcome_text">Welcome {{ request.user }}</p>
+        {% else %}
+            <a href="/">Please login to Access these Apps</a>
+        {% endif %}
+    <hr>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row" id="nav_row">
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Menu</a>
+            <a href="#">Team</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="row">
+                <div class="app_1"></div>
+                <div class="app_2"></div>
+                <div class="app_3"></div>
+                <hr class="breaker">
+            </div>
+            <div class="row">
+                <div class="app_4"></div>
+                <hr class="breaker">
+            </div>
+            <div class="row">
+                <div class="scroll-container">
+                    <div class="row">
+                        <div class="app_1"></div>
+                        <div class="app_2"></div>
+                        <div class="app_3"></div>
+                    </div>
+                </div>
+                <hr class="breaker">
+            </div>
+            <div class="row">
+                <div class="app_6"></div>
+                <div class="app_7"></div>
+                <div class="app_8"></div>
+                <div class="app_9"></div>
+                <div class="app_10"></div>
+            </div>
+        </div>
+        
+        <div class="vertical-line col-md-2">
+            <div class="app_meta_A"></div>
+            <div class="app_meta_B"></div>
+            <div class="app_meta_C"></div>
+            <div class="app_meta_D"></div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="row">
+                <div class="app_meta_1"></div>
+                <div class="app_meta_2"></div>
+                <div class="app_meta_3"></div>
+                <div class="app_meta_4"></div>
+                <hr class="breaker">
+            </div>
+            <div class="row">
+                <div class="app_supa"></div>
+                <hr class="breaker">
+            </div>
+            <div class="row">
+                <div class="app_meta_6"></div>
+                <div class="app_meta_7"></div>
+                <div class="app_meta_8"></div>
+                <div class="app_meta_9"></div>
+                <div class="app_meta_10"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock%}
